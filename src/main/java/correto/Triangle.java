@@ -1,12 +1,12 @@
 package correto;
 
 public class Triangle {
-	static final int INVALID = 0;
-	static final int SCALENE = 1;
-	static final int ISOSCELES = 2;
-	static final int EQUILATERAL = 3;
+	public static final int INVALID = 0;
+	public static final int SCALENE = 1;
+	public static final int ISOSCELES = 2;
+	public static final int EQUILATERAL = 3;
 
-	public int Type_Area(int a, int b, int c) {
+	public static int Type_Area(int a, int b, int c) {
 		int type;
 
 		if (a <= 0 || b <= 0 || c <= 0 || (a + b <= c) || (b + c <= a) || (a + c <= b)) {
@@ -14,7 +14,7 @@ public class Triangle {
 		} else {
 			type = SCALENE;
 
-			if (a == b || b == c)
+			if (a == b || b == c || a == c)
 				type = ISOSCELES;
 
 			if (a == b && b == c) {
