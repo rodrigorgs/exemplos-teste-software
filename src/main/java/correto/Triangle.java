@@ -9,7 +9,12 @@ public class Triangle {
 	public static int Type_Area(int a, int b, int c) {
 		int type;
 
-		if (a <= 0 || b <= 0 || c <= 0 || (a + b <= c) || (b + c <= a) || (a + c <= b)) {
+		if (a <= 0 ||
+				b <= 0 ||
+				c <= 0 ||
+				(a + b <= c) ||
+				(b + c <= a) ||
+				(a + c <= b)) {
 			type = INVALID;
 		} else {
 			type = SCALENE;
